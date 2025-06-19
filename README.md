@@ -1,12 +1,11 @@
-# React + Vite
+# Grocery List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Grocery List is a simple app that let's you add your shopping list and share it with your roommates. You can both add things in your grocery list and cross it off as soon as you pick it up.
 
-Currently, two official plugins are available:
+It works with Firebase, but if you have the knowledge you can hook it up with any database, works better if it's setup as a realtime dB.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setting up
 
-## Expanding the ESLint configuration
+You'll need to setup firebase everything in the code is already setup you only have to have a .env file or if you fork it and deploy it with netlify make sure you set the environment variable to VITE_DATABASE = "Your firebase URL here".
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Make sure that you have public rules on with firebase in order for the app to be able to read/write freely and don't share your URL with anyone cause that means they will have access to your dB.
