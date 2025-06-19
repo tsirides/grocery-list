@@ -1,0 +1,143 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+h2,
+h1 {
+  margin: 0;
+}
+body {
+  font-family: "Geologica", sans-serif;
+  background: #e7f2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 96px;
+  width: 100%;
+  padding: 32px;
+}
+#root {
+  width: 500px;
+  padding: 32;
+}
+
+h1 {
+  font-size: 1rem !important;
+  font-weight: 400;
+}
+h2 {
+  font-size: 1.5rem;
+  color: #8496fa;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 1rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  border-bottom: 1px solid #8496fa;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-list {
+  max-height: 500px;
+  overflow: auto;
+}
+
+.item-head {
+  display: flex;
+  gap: 16px;
+}
+.item-head button {
+  background: #f1c5c5;
+  border: 1px solid #f58d8d;
+  color: #a02929;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+form {
+  display: flex;
+  gap: 8px;
+}
+
+.numbers {
+  display: flex;
+  gap: 2px;
+}
+.numbers input {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #cecece;
+  max-width: 30px;
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.increment {
+  background: none;
+  border: 1px solid #cecece;
+  border-radius: 4px;
+  padding: 4px 8px;
+  height: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.item-input {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+.item-input input {
+  width: 70%;
+  border-radius: 4px;
+  border: 1px solid #cecece;
+}
+.item-input button {
+  width: 30%;
+  border-radius: 4px;
+  border: 1px solid #5363c2;
+  background: #8496fa;
+  color: #232e6e;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.strike span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.header button {
+  background: #f58d8d;
+  padding: 6px 16px;
+  border-radius: 4px;
+  border: 1px solid #a02929;
+  color: #a02929;
+  font-family: inherit;
+}
