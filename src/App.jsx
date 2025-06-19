@@ -11,7 +11,6 @@ import {
   push,
   onValue,
   remove,
-  update,
   set,
 } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 
@@ -75,7 +74,7 @@ export default function App() {
   }
 
   useEffect(() => {
-    if (groceryList.length > 0) {
+    if (groceryList.length >= 0) {
       set(referenceInDB, groceryList);
     }
   }, [groceryList]);
