@@ -92,7 +92,6 @@ export default function App() {
         }
       })
     );
-    console.log(groceryList);
   }
 
   return (
