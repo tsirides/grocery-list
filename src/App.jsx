@@ -84,24 +84,23 @@ export default function App() {
     }
   }
 
-  // useEffect(() => {
-  //   if (groceryList.length >= 0) {
-  //     set(referenceInDB, groceryList);
-  //   }
-  // }, [groceryList]);
-
-  //Using the map inside the set allows to check every item and if the item.id is equal to
-  //the checking box id then you set that specific checkbox to the opposite of what it was
-  //before.
   function checkItem(id) {
-    setGroceryList(
-      groceryList.map((item) => {
-        if (item.uuid === id) {
-          return { ...item, isChecked: !item.isChecked };
-        } else {
-          return item;
+    onValue(
+      referenceInDB,
+      (snapshot) => {
+        const data = snapshot.val();
+        const itemKey = Object.keys(data).find((key) => data[key].uuid === id);
+
+        if (itemKey) {
+          const itemRef = ref(database, `items/${itemKey}`);
+          const currentChecked = data[itemKey].isChecked;
+          set(itemRef, {
+            ...data[itemKey],
+            isChecked: !currentChecked,
+          });
         }
-      })
+      },
+      { onlyOnce: true }
     );
   }
 
