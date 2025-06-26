@@ -73,11 +73,11 @@ export default function App() {
     }
   }
 
-  useEffect(() => {
-    if (groceryList.length >= 0) {
-      set(referenceInDB, groceryList);
-    }
-  }, [groceryList]);
+  // useEffect(() => {
+  //   if (groceryList.length >= 0) {
+  //     set(referenceInDB, groceryList);
+  //   }
+  // }, [groceryList]);
 
   //Using the map inside the set allows to check every item and if the item.id is equal to
   //the checking box id then you set that specific checkbox to the opposite of what it was
