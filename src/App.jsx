@@ -60,6 +60,17 @@ export default function App() {
 
   function deleteItem(id) {
     setGroceryList(groceryList.filter((item) => item.uuid !== id));
+    onValue(
+      referenceInDB,
+      (snapshot) => {
+        const data = snapshot.val();
+        const itemKey = Object.keys(data).find((key) => data[key].uuid === id);
+        if (itemKey) {
+          remove(ref(database, `items/${itemKey}`));
+        }
+      },
+      { onlyOnce: true }
+    );
   }
 
   function clearList() {
